@@ -1,0 +1,22 @@
+package chapter4;
+
+public class Modulus {
+    public static void main(String[] args) {
+        int x = 42;
+        double y = 42.25;
+
+        System.out.println("x mod 10 = " + x % 10);
+        System.out.println("y mod 10 = " + y % 10);
+
+        //Составные арифметические операции с присваиванием
+
+        int a = 2;
+
+    //  a = a + 4;   можно написать и так и по примеру ниже
+
+        a %= 2;
+        System.out.println(a);
+
+
+    }
+}
