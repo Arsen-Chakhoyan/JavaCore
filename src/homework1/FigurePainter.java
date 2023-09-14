@@ -1,15 +1,20 @@
 package homework1;
 
 public class FigurePainter {
-    public static void main(String[] args) {
-        for (int i = 0; i <= 5; i++) {
+    void figureOne(int n, char c) {
+        if (n < 1){
+            System.out.println("Incorrect value");
+            return;
+        }
+        for (int i = 0; i <= n; i++) {
             for (int j = 0; j < i; j++) {
-                System.out.print("* ");
+                System.out.print( c + " ");
             }
             System.out.println();
         }
+    }
 
-        System.out.println();
+        void figureTwo() {
 
         for (int i = 5; i > 0; i--) {
             for (int j = i; j > 0; j--) {
@@ -18,8 +23,9 @@ public class FigurePainter {
             System.out.println();
 
         }
-        System.out.println();
+    }
 
+         void figureThree() {
         for (int i = 0; i < 5; i++) {
             for (int j = 5; j > i; j--) {
                 System.out.print("  ");
@@ -29,7 +35,9 @@ public class FigurePainter {
             }
             System.out.println();
         }
-        System.out.println();
+    }
+
+       void figureFour() {
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j <= i; j++) {
@@ -40,7 +48,9 @@ public class FigurePainter {
             }
             System.out.println();
         }
-        System.out.println();
+    }
+
+        void figureFive() {
 
         for (int i = 0; i < 5; i++) {
             for (int j = 5; j > i; j--) {
@@ -60,11 +70,12 @@ public class FigurePainter {
             }
             System.out.println();
         }
+    }
 
 
     }
 
-}
+
 
 
 
