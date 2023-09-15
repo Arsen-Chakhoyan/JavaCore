@@ -6,6 +6,20 @@ public class Box {
     double height;
     double depth;
 
+    Box (double w, double h, double d) {    // Параметризованный конструктор
+
+        width = w;
+        height = h;
+        depth = d;
+    }
+
+    Box() {             //Конструктор
+
+        width = 10;
+        height= 10;
+        depth = 10;
+    }
+
     double volume() {
         return width * height * depth;
     }
