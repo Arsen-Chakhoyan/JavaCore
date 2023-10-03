@@ -13,6 +13,48 @@ public class DynamicArray {//սա մեր հիմնական մասիվն է, որ�
         }
         array[size++] = value;
     }
+    void add(int index, int value){
+        if (index < 0 || index >= size) {
+            System.out.println("Wrong index");
+            return;
+        }
+        if (size == array.length) {
+            extend();
+        }
+        for (int i = size - 1; i >= index ; i--) {
+            array[i+1]= array[i];
+        }
+        array[index] = value;
+        size++;
+    }
+     boolean exists(int value){
+         for (int i = 0; i < size; i++) {
+             if (array[i] == value){
+                 return true;
+             }
+         }
+         return  false;
+     }
+
+
+    void deleteByIndex(int index) {
+        if (index < 0 || index >= size) {
+            System.out.println("Wrong index");
+            return;
+        }
+        for (int i = index + 1 ; i < size; i++) {
+            array[i - 1] = array[i];
+        }
+        size--;
+    }
+
+      void set(int index, int value){
+          if (index < 0 || index >= size) {
+              System.out.println("Wrong index");
+           return;
+          }
+          array[index] = value;
+}
 
     //1․ ստեղծել հին մասիվից 10 էլեմենտ ավելի մեծ մասիվ
     //2․ քցել հին մասիվի էլեմենտները նորի մեջ
@@ -23,6 +65,14 @@ public class DynamicArray {//սա մեր հիմնական մասիվն է, որ�
             tmp[i] = array[i];
         }
         array = tmp;
+    }
+    int getIndexByValue(int value) {
+        for (int i = 0; i < size; i++) {
+            if (array[i] == value){
+                return  i;
+            }
+        }
+        return  -1;
     }
 
     //եթե տրված ինդեքսը մեր ունեցած մասիվի ինդեքսի սահմաններում է, վերադարձնել
@@ -38,8 +88,9 @@ public class DynamicArray {//սա մեր հիմնական մասիվն է, որ�
     //տպել մասիվի ավելացված էլեմենտները
     public void print() {
         for (int i = 0; i < size; i++) {
-            System.out.println(array[i] + " ");
+            System.out.print(array[i] + " ");
         }
+        System.out.println();
     }
 
 }

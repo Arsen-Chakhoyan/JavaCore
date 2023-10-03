@@ -13,11 +13,16 @@ public class StackTest {
             System.out.println(mystack1.pop());
 
         System.out.println("Содержимое стека mystack2:");
-        for (int i = 0; i <10 ; i++)
+        for (int i = 0; i < 10; i++)
             System.out.println(mystack2.pop());
 
-        }
-        }
+        //эти операторы недоступны из за того что в класе Stack int-ы приватные
+
+//        mystack1.tos = -2;
+//        mystack2.stck[3] = 100;
+
+    }
+}
 
 
 
